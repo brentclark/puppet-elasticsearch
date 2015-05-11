@@ -1,3 +1,48 @@
+##0.9.5( Apr 16, 2015 )
+
+###Summary
+Bugfix release 0.9.5
+
+We reverted the change that implemented the full 40 character for the apt repo key.
+This caused issues with some older versions of the puppetlabs-apt module
+
+####Features
+
+####Bugfixes
+* Revert using the full 40 character for the apt repo key.
+
+####Changes
+
+####Testing changes
+
+####Known bugs
+* Possible package conflicts when using ruby/python defines with main package name
+
+
+##0.9.4( Apr 14, 2015 )
+
+###Summary
+Bugfix release 0.9.4
+
+####Features
+* Add the ability to create and populate scripts
+
+####Bugfixes
+* add support for init_defaults_file to elasticsearch::instance
+* Update apt key to full 40characters
+
+####Changes
+* Fix readme regarding module_dir with plugins
+
+####Testing changes
+* Adding staged removal test
+* Convert git urls to https
+* Add centos7 node config
+
+####Known bugs
+* Possible package conflicts when using ruby/python defines with main package name
+
+
 ##0.9.3( Mar 24, 2015 )
 
 ###Summary

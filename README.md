@@ -46,7 +46,7 @@ This module has been tested against ES 1.0 and up.
 #### Repository management
 When using the repository management you will need the following dependency modules:
 
-* Debian/Ubuntu: [Puppetlabs/apt](http://forge.puppetlabs.com/puppetlabs/apt)
+* Debian/Ubuntu: [Puppetlabs/apt](http://forge.puppetlabs.com/puppetlabs/apt) Version 1.8.x or lower.
 * OpenSuSE: [Darin/zypprepo](https://forge.puppetlabs.com/darin/zypprepo)
 
 ##Usage
@@ -145,6 +145,19 @@ elasticsearch::plugin { 'lmenezes/elasticsearch-kopf',
 * `elasticsearch/plugin/version` for official elasticsearch plugins (download from download.elasticsearch.org)
 * `groupId/artifactId/version`   for community plugins (download from maven central or oss sonatype)
 * `username/repository`          for site plugins (download from github master)
+
+
+###Scripts
+
+Install [scripts](http://www.elastic.co/guide/en/elasticsearch/reference/1.x/modules-scripting.html) to be used by Elasticsearch.
+These scripts are shared accross all defined instances on the same host.
+
+```puppet
+elasticsearch::script { 'myscript':
+  ensure => 'present',
+  source => 'puppet:///path/to/my/script.groovy'
+}
+```
 
 ###Templates
 
